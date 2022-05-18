@@ -1,6 +1,5 @@
 package com.example.demo.models;
 
-import sun.security.krb5.internal.ccache.Tag;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -38,4 +37,12 @@ public class Test {
         this.description = description;
         this.published = published;
     }
+
+    //Getters and Setters
+    public void addTag(Tag tag){
+       this.tags.add(tag);
+       tag.getTest().add(this);
+    }
+
+    
 }
