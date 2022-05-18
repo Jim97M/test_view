@@ -27,7 +27,7 @@ public class Test {
      inverseJoinColumns = {@JoinColumn(name="tag_id")})
     private Set<Tag> tags = new HashSet<>();
 
-    
+
 
     public Test(){
 
