@@ -1,8 +1,10 @@
 package com.example.demo.controllers;
 
+import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.models.Test;
 import com.example.demo.repository.TestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,10 +35,7 @@ public class TestController {
     }
     @GetMapping("/test/{id}")
     public ResponseEntity<List<Test>> getTestById(@PathVariable("id") long id){
-        Optional<Test> testData = testRepository.findById(id);
-        if(testData.isPresent())
-            return new ResponseEntity<>(testData.get(), HttpStatus.OK);
-        else
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        Test test = testRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found Tutorial with id = " + id));
+
     }
 }

@@ -7,5 +7,4 @@ import java.util.List;
 
 public interface TagRepository extends JpaRepository<Test, Long> {
     List<Test> findTagsByTestsId(Long TestId);
-
 }

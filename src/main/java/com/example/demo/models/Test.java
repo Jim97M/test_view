@@ -10,7 +10,7 @@ import java.util.Set;
 public class Test {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     @Column(name = "title")
     private String title;
     @Column(name = "description")
@@ -43,6 +43,12 @@ public class Test {
        this.tags.add(tag);
        tag.getTest().add(this);
     }
+
+    //Remove the Tag object Class
+    public void removeTag(long tagId){
+        Tag tag = this.tags.stream().filter(t->t.getId() == tagId).findFirst().orElse(null);
+    }
+
 
     
 }
