@@ -34,8 +34,8 @@ public class TestController {
         }
     }
     @GetMapping("/test/{id}")
-    public ResponseEntity<List<Test>> getTestById(@PathVariable("id") long id){
+    public ResponseEntity<Test> getTestById(@PathVariable("id") long id){
         Test test = testRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Not found Tutorial with id = " + id));
-
+      return new ResponseEntity<>(test, HttpStatus.OK);
     }
 }
