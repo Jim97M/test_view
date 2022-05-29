@@ -26,15 +26,36 @@ public class Test {
      inverseJoinColumns = {@JoinColumn(name="tag_id")})
     private Set<Tag> tags = new HashSet<>();
 
-
-
-    public Test(){
-
+    public Test() {
     }
 
     public Test(String title, String description, Boolean published){
         this.title = title;
         this.description = description;
+        this.published = published;
+    }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public void setTitle(String title){
+        this.title = title;
+    }
+
+    public String getDescription(){
+        return description;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
+    }
+
+    public Boolean getPublished(){
+        return true;
+    }
+
+    public void  setPublished(Boolean published){
         this.published = published;
     }
 
