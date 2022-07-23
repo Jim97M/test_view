@@ -1,4 +1,10 @@
 package com.example.demo.security.services;
+/*
+
+If authentication is successful we can get User information from UserDetails Interface
+
+
+ */
 
 import com.example.demo.models.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
