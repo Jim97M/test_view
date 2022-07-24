@@ -7,7 +7,7 @@ public class Role {
      @Id
      @GeneratedValue(strategy =  GenerationType.IDENTITY)
      private  Integer id;
-     @Enumarated(EnumType.STRING)
+     @Enumerated(EnumType.STRING)
      @Column(length = 20)
      private Erole name;
 
