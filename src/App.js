@@ -1,7 +1,21 @@
-import React from "react";
-import "./index.css";
-import ReactDOM from "react-dom";
-import App from "./App";
+import React from 'react';
+import reactDom from 'react-dom';
+import { 
+    BrowserRouter,
+    Route,
+    Routes
+  } from 'react-router-dom';
+import Signup from './auth/signup/Signup';
+  const App = () => {
+      return(
+          <BrowserRouter>
+             <Routes>
+                 <Route index element={<Signup />} />
 
-const appElement = document.getElementById("app");
-ReactDOM.render(<App/>, appElement);
+                 <Route path='/' element={<Signup />} />
+             </Routes>
+          </BrowserRouter>
+      );
+  };
+
+  export default App;

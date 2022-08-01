@@ -30,6 +30,8 @@ module.exports = {
                 "css-loader",
             ],
         },
+
+
           {
             test: /\.svg$/,
             use: [
@@ -40,7 +42,13 @@ module.exports = {
                 },
               },
             ],
+
           },
+
+          {
+            test: /\.png$/,
+            use: 'file-loader'
+          }
         ],
       },
       plugins: [
