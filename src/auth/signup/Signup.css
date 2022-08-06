@@ -19,6 +19,11 @@
     font-size: 16px;
 }
 
+.social-signup{
+    display:grid;
+    
+}
+
 .social-btn img {
     height: 32px;
     float: left;
@@ -39,3 +44,15 @@
     margin-left: 3px;
 }
 
+.login-link{
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+}
+
+.signup-title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: rgba(0, 0, 0, 0.65);
+}
