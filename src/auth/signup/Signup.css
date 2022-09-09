@@ -1,14 +1,18 @@
 .signup-container{
+    background: linear-gradient(75.7deg, rgb(34, 126, 34) 3.8%, rgb(99, 162, 17) 87.1%);
     text-align: center;
+    overflow: hidden;
+    height: 900px;
 }
 
 .signup-content {
     background: #fff;
     box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
-    border-radius: 2px;
-    width: 500px;
+    border-radius: 10px;
+    width: 900px;
+    height: 700px;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 40px;
     vertical-align: middle;
     position: relative;
     padding: 35px;
@@ -56,3 +60,4 @@
     margin-bottom: 30px;
     color: rgba(0, 0, 0, 0.65);
 }
+

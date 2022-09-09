@@ -28,6 +28,7 @@ module.exports = {
             use: [
                 miniCssExtraPlugin.loader,
                 "css-loader",
+                "postcss-loader",
             ],
         },
 
