@@ -1,13 +1,9 @@
 import React, {useState, useRef, useEffect} from 'react'
-import fbLogo from '../../img/fb-logo.png';
-import githubLogo from '../../img/github-logo.png';
-import googleLogo from '../../img/google-logo.png';
-import './Signup.css';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import axios from '../../httpClient/axios';
-import Login from '../login/Login';
-const REGISTER_URL = "/auth/signup";
 
+import axios from 'axios';
+import {Link, useNavigate} from 'react-router-dom';
+import authLogo from '../../img/close-up-picture.jpg';
+import './Signup.css';
 
 const Signup = () => {
 
@@ -26,9 +22,12 @@ const Signup = () => {
   const [errMsg, setErrMsg] = useState('');
   const [success, setSuccess] = useState(false);
 
-  //useEffect(() => {
-   //  useRef().current.focus();
- // })
+
+  const navigate = useNavigate();
+
+  const handleChange = ({currentTarget:input}) => {
+    
+  }
 
   useEffect(() => {
     setErrMsg('');
@@ -64,69 +63,50 @@ const Signup = () => {
       errRef.current.focus();
     }
   }
-
-  return(
   
-    <div className="signup-container">
-     <div className="signup-content">
-        <h1 className="signup-title">Test View</h1>
-        <SocialSignup />
-        <div className="or-separator">
-            <span className="or-text">OR</span>
-        </div>
-        <SignupForm/>
-        <span className="login-link">Already have an account?</span>
-     </div>
+  return (
+    <div className="signup_container">
+       <div className="signup_form_container">
+          <div className="left">
+            <img src={authLogo} />
+          </div>
+          <div className="right">
+              <form className='form_container'>
+                  <h2>Create Account</h2>
+                  <input 
+                    type="text"
+                    placeholder="User Name"
+                    className="input"
+                    required
+                  />
+                  <input 
+                    type="text"
+                    placeholder="Email"
+                    className="input"
+                    required
+                  />   
+                  <input 
+                  type="password"
+                  placeholder="Password"
+                  className="input"
+                  required
+                />
+
+                <input 
+                  type="password"
+                  placeholder="Confirm Password"
+                  className="input"
+                  required
+                />
+
+                <button type='submit' className='green_btn'>
+                  Sign Up
+                </button>
+
+              </form>
+          </div>
+       </div>
     </div>
   )
-}
-
-
-const SocialSignup = () => {
-    return(
-        <div className='social-signup'>
-            <a className='btn btn-block social-btn google' href='#'>
-              <img src={googleLogo} alt="Google" /> Sign Up With Google
-            </a>
-            <a className='btn btn-block social-btn facebook' href='#'>
-              <img src={githubLogo} alt="Facebook" /> Sign Up With Github
-            </a>
-            <a className='btn btn-block social-btn github' href='#'>
-              <img src={fbLogo} alt="Github" /> Sign Up With Facebook
-            </a>
-        </div>
-    )
-}
-
-const ImageDisplay = () => {
-  
-}
-const SignupForm = () => {
-  return (
-    <>
-    <form>
-      <div className='form-item'>
-        <label htmlFor='username'>
-          Username
-        </label>
-
-        <input 
-           type="text" name="name" placeholder='Name' className="form-control" required/>
-      </div>
-      <div className='form-item'>
-        <input type="email" name="email" placeholder='Email' className="form-control" required/>
-      </div>
-      <div className='form-item'>
-        <input type="password" name="password" placeholder='Password' className="form-control" required/>
-      </div>
-     
-     <div className='form-item'>
-       <button type='submit' className='btn btn-block btn-primary'> Sign Up</button>
-     </div>
-
-    </form>
-</>
-  )
-}
-
+  }
 export default Signup;

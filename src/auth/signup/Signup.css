@@ -1,63 +1,73 @@
-.signup-container{
-    background: linear-gradient(75.7deg, rgb(34, 126, 34) 3.8%, rgb(99, 162, 17) 87.1%);
-    text-align: center;
-    overflow: hidden;
-    height: 900px;
+.signup_container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.signup-content {
-    background: #fff;
-    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
-    border-radius: 10px;
+  .signup_form_container {
     width: 900px;
-    height: 700px;
-    display: inline-block;
-    margin-top: 40px;
-    vertical-align: middle;
-    position: relative;
-    padding: 35px;
-}
-.social-btn {
-    margin-bottom: 15px;
-    font-weight: 400;
-    font-size: 16px;
-}
+    height: 500px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+    }
 
-.social-signup{
-    display:grid;
-    
-}
+ .left {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 
-.social-btn img {
-    height: 32px;
-    float: left;
-    margin-top: 10px;
-}
+ }
 
-.social-btn.google {
-    margin-top: 7px;
-}
+ .right{
+   flex: 2;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: white;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+ }
 
-.social-btn.facebook img {
-    height: 24px;
-    margin-left: 3px;
-}
+ .form_container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
 
-.social-btn.github img {
-    height: 24px;
-    margin-left: 3px;
-}
+ .form_container h1{
+     font-size: 40px;
+     margin-top: 0;
+ }
 
-.login-link{
-    color: rgba(0, 0, 0, 0.65);
+ .input{
+     outline: none;
+     border: none;
+     width: 370px;
+     padding: 15px;
+     border-radius: 10px;
+     background-color: #edf5f3;
+     margin: 5px 0;
+     font-size: 14px;
+ }
+
+.green_btn {
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    background-color: lightgreen;
+    border-radius: 20px;
+    width: 367px;
+    font-weight: bold;
     font-size: 14px;
+    cursor: pointer;
 }
 
-.signup-title {
-    font-size: 1.5em;
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 30px;
-    color: rgba(0, 0, 0, 0.65);
+.header1 {
+ margin-top: 5px;
 }
-
